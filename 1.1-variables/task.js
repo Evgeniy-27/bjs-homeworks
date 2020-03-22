@@ -8,8 +8,13 @@
 function averageMark(a, g, p) {
 	
     // реализуйте здесь задание №1
-    
-	return // ваш ответ;
+	let algebra = a;
+	let geography = g;
+	let physics = p;
+
+	arithmeticMean = (a + g + p)/3;
+
+	return arithmeticMean;
 }
 
 function sayHello(userName) {
