@@ -27,7 +27,6 @@ function getGreeting(name) {
       } else {
         greeting = `Привет, мир! Меня зовут ${name}`;
       }
-      //greeting = String(title);
 
     return greeting;
 }
