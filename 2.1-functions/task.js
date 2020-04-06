@@ -5,10 +5,10 @@ function getSolutions(a, b, c) {
     let roots = [];
     //console.log(D)
     if (D === 0) {
-        roots[0] = -b / 2 * a;
+        roots[0] = -b / (2 * a);
     } else if (D > 0) {
-        roots[0] = ((-b + Math.sqrt(D)) / 2) * a;
-        roots[1] = ((-b - Math.sqrt(D)) / 2) * a;
+        roots[0] = (-b + Math.sqrt(D)) / (2 * a);
+        roots[1] = (-b - Math.sqrt(D)) / (2 * a);
     }
     return { D, roots };
 }
