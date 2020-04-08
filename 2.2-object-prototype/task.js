@@ -25,17 +25,17 @@ function getAverageMark(marks) {
 function checkBirthday(birthday) {
     let verdict;
     let now = Date.now();
-    let Dat = new Date(birthday);
-    let birth = +Dat;
+    let dat = new Date(birthday);
+    let birth = +dat;
     let diff = now - birth;
     let age = diff / 31536000000
     //console.log(age);
-    if (age > 18) {
-        verdict = true;
-    } else {
-        verdict = false;
-    }
+    //if (age > 18) {
+       // verdict = true;
+    //} else {
+        //verdict = false;
+    //}
     //console.log(verdict);
 
-    return verdict
+    return age > 18
 }
