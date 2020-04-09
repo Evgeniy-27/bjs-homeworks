@@ -4,7 +4,7 @@ class Weapon {
         this.attack = 20;
         this.durability = 10;
         this.range = 1;
-        this.startDurabikity = durability;
+        this.startDurabikity = this.durability;
     }
     takeDamage(damage) {
         this.durability -= damage;
