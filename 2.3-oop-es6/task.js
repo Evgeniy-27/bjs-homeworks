@@ -29,7 +29,6 @@ class Weapon {
         }
     }
 }
-
 const weapon = new Weapon('Старый меч', 20, 10, 1);
 
 //const arm = new Weapon('Рука', 1, Infinity, 1);
@@ -132,9 +131,6 @@ class StormStaff extends Staff {
     }
 }
 const stormStaff = new StormStaff();
-
-console.log(weapon);
-
 //Задача 3
 
 class StudentLog {
