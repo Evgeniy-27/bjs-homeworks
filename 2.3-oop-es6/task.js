@@ -1,5 +1,5 @@
 class Weapon {
-    constructor(name, attack, durability, range) {
+    constructor({name, attack, durability, range}) {
         this.name = name;
         this.attack = attack;
         this.durability = durability;
@@ -29,108 +29,140 @@ class Weapon {
         }
     }
 }
-const weapon = new Weapon('Старый меч', 20, 10, 1);
+// const sword = new Weapon({
+//   name: 'Старый меч',
+//   attack: 20,
+//   durability: 10,
+//   range: 1,
+// });
 
-//const arm = new Weapon('Рука', 1, Infinity, 1);
+// const arm = new Weapon({
+//   name: 'Рука',
+//   attack: 1,
+//   durability: Infinity,
+//   range: 1,
+//  });
 class Arm extends Weapon {
     constructor() {
-        super();
+      super({});
         this.name = 'Рука';
         this.attack = 1;
         this.durability = Infinity;
-        this.range = 1;
+        this.range = 1; 
         this.startDurabikity = this.durability;
     }
-}
-const arm = new Arm();
-
-//const bow = new Weapon('Лук', 10, 200, 3);
+};
+// const bow = new Weapon({
+//   name: 'Лук',
+//   attack: 10,
+//   durability: 200,
+//   range: 3,
+// });
 class Bow extends Weapon {
     constructor() {
-        super();
+        super({});
         this.name = 'Лук';
         this.attack = 10;
         this.durability = 200;
         this.range = 3;
-        this.startDurabikity = this.durability;
+       this.startDurabikity = this.durability;
     }
-}
-const bow = new Bow();
-
-
+};
+// const sword = new Weapon({
+//   name: 'Меч',
+//   attack: 25,
+//   durability: 500,
+//   range: 1,
+// });
 class Sword extends Weapon {
     constructor() {
-        super();
+        super({});
         this.name = 'Меч';
         this.attack = 25;
         this.durability = 500;
         this.range = 1;
         this.startDurabikity = this.durability;
     }
-}
-//const sword = new Sword();
-
-//const knife = new Weapon('Нож', 5, 300, 1);
+};
+// const knife = new Weapon({
+//   name: 'Нож',
+//   attack: 5,
+//   durability: 300,
+//   range: 1,
+// });
 class Knife extends Weapon {
     constructor() {
-        super();
+        super({});
         this.name = 'Нож';
         this.attack = 5;
         this.durability = 300;
         this.range = 1;
         this.startDurabikity = this.durability;
     }
-}
-const knife = new Knife();
-
-//const staff = new Weapon('Посох', 8, 300, 2);
+};
+// const staff = new Weapon({
+//   name: 'Посох',
+//   attack: 8,
+//   durability: 300,
+//   range: 2,
+//   });
 class Staff extends Weapon {
     constructor() {
-        super();
+        super({});
         this.name = 'Посох';
         this.attack = 8;
         this.durability = 300;
         this.range = 2;
         this.startDurabikity = this.durability;
     }
-}
-const staff = new Staff();
-
-//const longBow = new Weapon('Длинный лук', 15, bow.durability, 4);
+};
+// const longBow = {
+//   name: 'Длинный лук',
+//   attack: 15,
+//   durability: bow.durability,
+//   range: 4,
+// };
 class LongBow extends Bow {
     constructor() {
-        super();
+        super({});
         this.name = 'Длинный лук';
         this.attack = 15;
         this.range = 4;
         this.startDurabikity = this.durability;
     }
-}
-const longBow = new LongBow();
-
-//const axe = new Weapon('Секира', 25, 800, sword.range);
+};
+// const axe = {
+//   name: 'Секира',
+//   attack: 27,
+//   durability: 800,
+//   range: sword.range,
+// };
 class Axe extends Sword {
     constructor() {
-        super();
+        super({});
         this.name = 'Секира';
         this.attack = 27;
         this.durability = 800;
         this.startDurabikity = this.durability;
     }
-}
-const axe = new Axe();
-
-//const StormStaff = new Weapon('Посох Бури', 10, staff.durability, 3);
+};
+// const stormStaff = {
+//   name: 'Посох Бури',
+//   attack: 10,
+//   durability: staff.durability,
+//   range: 3,
+// };
 class StormStaff extends Staff {
     constructor() {
-        super();
+        super({});
         this.name = 'Посох Бури';
         this.attack = 10;
         this.range = 3;
         this.startDurabikity = this.durability;
     }
-}
-const stormStaff = new StormStaff();
+};
+
+
 //Задача 3
 
 class StudentLog {

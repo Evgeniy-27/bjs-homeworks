@@ -4,7 +4,12 @@ describe('Домашнее задание к занятию 2.3 «ООП в JS (
   let studentLog;
 
   beforeEach(function(){
-    weapon = new Weapon('Старый меч', 20, 10, 1);
+    weapon = new Weapon({
+      name: 'Старый меч',
+      attack: 20,
+      durability: 10,
+      range: 1,
+    });
 
     studentLog = new StudentLog("Иван Петров");
   }) 
