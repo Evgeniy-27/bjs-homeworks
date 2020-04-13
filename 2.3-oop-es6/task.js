@@ -36,12 +36,12 @@ class Weapon {
 //   range: 1,
 // });
 
-// const arm = new Weapon({
-//   name: 'Рука',
-//   attack: 1,
-//   durability: Infinity,
-//   range: 1,
-//  });
+ const arm = new Weapon({
+   name: 'Рука',
+   attack: 1,
+   durability: Infinity,
+   range: 1,
+  });
 class Arm extends Weapon {
     constructor() {
       super({});
@@ -52,12 +52,12 @@ class Arm extends Weapon {
         this.startDurabikity = this.durability;
     }
 };
-// const bow = new Weapon({
-//   name: 'Лук',
-//   attack: 10,
-//   durability: 200,
-//   range: 3,
-// });
+ const bow = new Weapon({
+   name: 'Лук',
+   attack: 10,
+   durability: 200,
+   range: 3,
+ });
 class Bow extends Weapon {
     constructor() {
         super({});
@@ -68,12 +68,12 @@ class Bow extends Weapon {
        this.startDurabikity = this.durability;
     }
 };
-// const sword = new Weapon({
-//   name: 'Меч',
-//   attack: 25,
-//   durability: 500,
-//   range: 1,
-// });
+ const sword = new Weapon({
+   name: 'Меч',
+   attack: 25,
+   durability: 500,
+   range: 1,
+ });
 class Sword extends Weapon {
     constructor() {
         super({});
@@ -84,12 +84,12 @@ class Sword extends Weapon {
         this.startDurabikity = this.durability;
     }
 };
-// const knife = new Weapon({
-//   name: 'Нож',
-//   attack: 5,
-//   durability: 300,
-//   range: 1,
-// });
+ const knife = new Weapon({
+   name: 'Нож',
+   attack: 5,
+   durability: 300,
+   range: 1,
+ });
 class Knife extends Weapon {
     constructor() {
         super({});
@@ -100,12 +100,12 @@ class Knife extends Weapon {
         this.startDurabikity = this.durability;
     }
 };
-// const staff = new Weapon({
-//   name: 'Посох',
-//   attack: 8,
-//   durability: 300,
-//   range: 2,
-//   });
+ const staff = new Weapon({
+   name: 'Посох',
+   attack: 8,
+   durability: 300,
+   range: 2,
+   });
 class Staff extends Weapon {
     constructor() {
         super({});
@@ -116,12 +116,12 @@ class Staff extends Weapon {
         this.startDurabikity = this.durability;
     }
 };
-// const longBow = {
-//   name: 'Длинный лук',
-//   attack: 15,
-//   durability: bow.durability,
-//   range: 4,
-// };
+ const longBow = {
+   name: 'Длинный лук',
+   attack: 15,
+   durability: bow.durability,
+   range: 4,
+ };
 class LongBow extends Bow {
     constructor() {
         super({});
@@ -131,12 +131,12 @@ class LongBow extends Bow {
         this.startDurabikity = this.durability;
     }
 };
-// const axe = {
-//   name: 'Секира',
-//   attack: 27,
-//   durability: 800,
-//   range: sword.range,
-// };
+ const axe = {
+   name: 'Секира',
+   attack: 27,
+   durability: 800,
+   range: sword.range,
+ };
 class Axe extends Sword {
     constructor() {
         super({});
@@ -146,12 +146,12 @@ class Axe extends Sword {
         this.startDurabikity = this.durability;
     }
 };
-// const stormStaff = {
-//   name: 'Посох Бури',
-//   attack: 10,
-//   durability: staff.durability,
-//   range: 3,
-// };
+ const stormStaff = {
+   name: 'Посох Бури',
+   attack: 10,
+   durability: staff.durability,
+   range: 3,
+ };
 class StormStaff extends Staff {
     constructor() {
         super({});
