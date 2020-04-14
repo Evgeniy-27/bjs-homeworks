@@ -35,14 +35,53 @@ function compareArrays(arr1, arr2) {
 
 //4. memorize
 function memorize(fn, limit) {
-let result = 0;
-return function mSum(...args) {
-        
-        return args.reduce((mSum, arg) => {
-            return mSum += +arg;
-        }, 0);
+    let memory = [];
+
+    return function (...args) {
+
+        let search = memory.find(element => compareArrays(element.args, args));
+        if (search) {
+            return search.result;
+        };
+
+        let result = fn(...args);
+
+        memory.push({
+            args: args,
+            result: result
+        });
+        // console.log(args);
+        // console.log(result);
+
+        if (memory.length > limit) {
+            memory.shift();
+        }
+        //console.log(memory);
+        return result;
+
     }
 }
 
-//const mSum = memorize(sum, 5); // 5 результатов может хранится в памяти
-console.log(mSum(3, 4))
+const mSum = memorize(sum, 5); // 5 результатов может хранится в памяти
+// console.log(sum(3, 4)); // 7
+// console.log(mSum(3, 4)); // 7
+
+// const mSum = memorize(sum, 2);
+// mSum(3, 4); // 7
+// mSum(1, 3); // 4
+
+const array = [[1, 2, 3, 8], [1, 2, 9], [1, 2, 3, 8], [1, 2, 9], [9, 5, 2, 4]];
+
+
+function testCase(testFunction, name) {
+    console.time(name);
+
+    for (let i = 0; i < 10; i++) {
+        array.forEach(function (arrg) {
+            testFunction(...arrg);
+        })
+    };
+    console.timeEnd(name);
+}
+testCase(mSum, 'withMemory');
+testCase(sum, 'withoutMemory');
