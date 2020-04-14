@@ -38,7 +38,6 @@ function memorize(fn, limit) {
     let memory = [];
 
     return function (...args) {
-
         let search = memory.find(element => compareArrays(element.args, args));
         if (search) {
             return search.result;
@@ -52,16 +51,13 @@ function memorize(fn, limit) {
         });
         // console.log(args);
         // console.log(result);
-
         if (memory.length > limit) {
             memory.shift();
         }
         //console.log(memory);
         return result;
-
     }
 }
-
 const mSum = memorize(sum, 5); // 5 результатов может хранится в памяти
 // console.log(sum(3, 4)); // 7
 // console.log(mSum(3, 4)); // 7
@@ -71,7 +67,6 @@ const mSum = memorize(sum, 5); // 5 результатов может храни
 // mSum(1, 3); // 4
 
 const array = [[1, 2, 3, 8], [1, 2, 9], [1, 2, 3, 8], [1, 2, 9], [9, 5, 2, 4]];
-
 
 function testCase(testFunction, name) {
     console.time(name);
