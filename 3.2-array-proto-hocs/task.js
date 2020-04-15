@@ -18,13 +18,11 @@ function compareArrays(arr1, arr2) {
     if (arr1.length != arr2.length) {
         return false
     }
-    function array(element, index) {
+    let array = (element, index) => {return element == arr2[index]}
         //console.log(element)
         //console.log(arr2[index])
-        if (element !== arr2[index]) {
-            return false
-        } else return true
-    }
+        
+    
     return arr1.every(array);
 }
 //console.log(compareArrays([8, 9], [6])); // false, разные значения
