@@ -1,7 +1,7 @@
 class AlarmClock {
-    constructor(timerId = null, alarmCollection = []) {
-        this.timerId = timerId;
-        this.alarmCollection = alarmCollection;
+    constructor() {
+        this.alarmCollection = [];
+        this.timerId = null;
     }
     addClock(time, callback, id) {
         if (id === undefined) {
@@ -42,9 +42,11 @@ class AlarmClock {
             }
         }
 
-        if (this.timerId === undefined) {
-            this.timerId = setInterval(() => {
-                this.alarmCollection.forEach((item) => checkClock(item));
+        if (!this.timerId) {
+            setInterval(() => {
+                this.alarmCollection.forEach(obj => {
+                    this.timerId = checkClock(obj);
+                });
             }, 1000);
         }
     }
@@ -68,11 +70,11 @@ class AlarmClock {
 // testCase
 function testCase() {
     let phoneAlarm = new AlarmClock();
-    phoneAlarm.addClock("20:00", () => console.log("Скоро спать"), 1);
-    phoneAlarm.addClock("20:01", () => {console.log("Пора готовиться ко сну!");
+    phoneAlarm.addClock("14:17", () => console.log("Скоро спать"), 1);
+    phoneAlarm.addClock("14:18", () => {console.log("Пора готовиться ко сну!");
     phoneAlarm.removeClock(2)},2);
     phoneAlarm.addClock("20:01", () => console.log("Иди умываться"));//отсутствует id
-    phoneAlarm.addClock("20:02", () => {
+    phoneAlarm.addClock("14:19", () => {
         console.log("Иди спать, завтра рано на работу!");
         phoneAlarm.clearAlarms();
         phoneAlarm.printAlarms();
